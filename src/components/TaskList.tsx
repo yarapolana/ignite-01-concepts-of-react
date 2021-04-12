@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import '../styles/tasklist.scss'
 
 import { FiTrash, FiCheckSquare } from 'react-icons/fi'
@@ -28,7 +27,17 @@ export function TaskList() {
   }
 
   function handleToggleTaskCompletion(id: number) {
-    // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
+    const updatedTasks = tasks.map((task, index) => {
+      const newTask = {
+        id,
+        title: task.title,
+        isComplete: !task.isComplete,
+      }
+
+      return task.id === id ? newTask : task
+    })
+
+    setTasks(updatedTasks)
   }
 
   function handleRemoveTask(id: number) {
