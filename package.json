@@ -1,7 +1,12 @@
 {
-  "name": "01-github-explorer",
+  "name": "01-concepts-of-react",
   "version": "1.0.0",
   "main": "index.js",
+  "author": {
+    "name": "Yara Polana",
+    "email": "yara@dotcode.is",
+    "url": "https://github.com/yarapolana/ignite-01-concepts-of-react"
+  },
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve",
